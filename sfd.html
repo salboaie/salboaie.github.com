@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640" />
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Swarming for Dummies</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/salboaie">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>salboaie.github.com</h1>
+            <h2>Swarming for Dummies</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <div id="no-downloads">
+        <span class="inner">
+        </span>
+      </div>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+         <table border="0" cellpadding="0" cellspacing="0" style="width: 500px; ">
+            <tbody>
+            <td>
+                <tr><img src="images/swarm/sfd.png" />
+                </tr>
+                <tr>
+                    <h2>Really, wtf is swarming?</h2>
+                </tr>
+            </td>
+            </tbody>
+        </table>
+            <p>&nbsp;</p>
+
+
+
+    <h3>Abstraction build over asynchronous messages…. </h3>
+    <p>
+        <ol>
+            <li> Yes, you can repeat this but it is not very useful.
+            <li> You put your APIs (functions, calls to web services, basic building blocks of logic,etc) in nodes and
+          you compose all these in a special language that get executed by jumping (swarming) from node to node.
+          <h5>Still.. nothing?</h5>
+        </ol>
+    </p>
+
+      <h3>What is a "swarm" ? </h3>
+      <p>
+          <img src="images/swarm/swarm.png" />
+      <ol>
+          <li> It is a message
+          <li> It is better because the swarm is "swarming" . Obviously.
+      </ol>
+      </p>
+
+
+      <h3>Bees are swarming from their hive in a forest, what the heck can be similar for messages? </h3>
+      <p>
+      <ol>
+          <li> When sending a message,we can pretend that the process (the one that is sending that message) is like a hive in a tree? Right? And the message
+              will arrive in another process (node), another tree, isn't it?
+          <li> But.. to do something meaningful, you don't send only a message, sometimes a lot of messages are sent between many processes.
+          You can unifying all that confusing behaviour as a swarming process where the initial swarm (message) is moving from tree to tree (processes) and
+          eventually the swarm get divided and is joining again when searching for food or for a new home.
+      </ol>
+          <img src="images/swarm/forest.jpg" />
+      </p>
+
+
+          <h3>Do the swarm have a plan?</h3>
+          <p>
+          <ol>
+              <li> I can't read bees mind, but we can imagine that any swarming happens to follow some PHASES
+              <li> Message swarming have a "swarming description", a file where what will happen with a new swarm is carefully
+          planned. <br> <h5> A swarming description contains variables (the bees :) ) , ctors (constructors, initialisation
+              phase) and descriptions for all phases. </h5>
+          </ol>
+          </p>
+
+          <h3>Dude,where is the honey?</h3>
+          <p>
+          <ol>
+              <li> It is in hives, of course.
+              <li> Well, for SwarmESB based systems, the honey is carried by bees (variables) but can be also stored and collected from
+          trees (nodes,process) visited by swarms. <br>
+          <h5>  The nodes (trees) offer to swarms some honey as APIs </h5>
+          </ol>
+            <img src="images/swarm/honey.jpg" />
+          </p>
+
+      <h3>Why is called swarming?</h3>
+      <p>
+      <ol>
+          <li> Because we like organic metaphors
+          <li> Because jumping  from node to node  (using the network) of a set of values can be seen as sending messages
+          but can be also seen as a swarming of some mysterious bees that care the honey (values) . After a swarm reaches
+          a node, it can swarm again and again and you can describe and understand all the related swarming activities.
+          <br> <h5> What can be cooler than this?</h5>
+      </ol>
+      </p>
+
+
+      <h3>Ok,I got it, show me some code </h3>
+      <p>
+      <ol>
+          <li> <a href="https://github.com/salboaie/SwarmESB/">Check SwarmESB's examples and code </a>
+          <li> <h5><a href="https://github.com/salboaie/SwarmESB/wiki"> Wiki, wiki we are swarming... (Read our wiki)</a> </h5>
+      </ol>
+      </p>
+
+
+      <h3>It is not somehow similar to SOA?</h3>
+      <p>
+      <ol>
+          <li> Yes it is.  It is trying to solve similar concerns and actually it can work well in a SOA environment.
+          <li> SOA requires some sort of ESBs and with SwarmESB we are targeting the orchestration and loose coupling issues that ESBs are trying to address.
+      </ol>
+      </p>
+
+      </section>
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>Projects by <a href="https://github.com/salboaie">salboaie</a> can be found on <a href="https://github.com/salboaie">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+  </body>
+</html>
